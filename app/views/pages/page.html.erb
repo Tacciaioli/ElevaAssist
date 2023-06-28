@@ -59,17 +59,14 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Título de la Página</h1>
-    <p><%= @generated_text %></p>
-
+  <div class="container" data-controller="chat">
+    <h1>Pergunta</h1>
     <div class="search-container">
-      <input type="text" class="search-input" placeholder="Escribe tu búsqueda...">
-      <button class="search-button">Buscar</button>
+      <input type="text" class="search-input" placeholder="Porque o ceu é azul?" data-chat-target="info">
+      <button class="search-button" data-action="click->chat#updateText">Perguntar</button>
     </div>
-
-    <p>Puedes agregar más contenido aquí si lo deseas.</p>
-    <a href="#">Enlace de ejemplo</a>
+    <p data-chat-target="text"></p>
   </div>
+
 </body>
 </html>
